@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --light-Blue-Normal: #1E293B;
+    --light-Blue-Light-active: #B9BDC2;
+    --light-Blue-Light-hover: #DDDFE2;
+
+    --gray-scale-Gray-500: #64748B;
+    --gray-scale-Gray-300: #94A3B8;
+    --gray-scale-Gray-200: #CBD5E1;
+    --gray-scale-Gray-100: #E2E8F0;
+
+    --dark-Blue-Light: #EFF0FE;
+    --dark-Blue-Normal: #3B82F6;
+
+    --background-color: #E9EAEB;
+
+    --text-color: #1E293B;
+
+    --feedback-Green-Light: hsla(125, 57%, 58%, 1);
+    --feedback-red-error: hsla(0, 84%, 60%, 1);
+
+
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
+    height: 100vh;
+    width: 50%;
+    margin: 140px auto 140px auto;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title-text {
+    color: var(--text-color);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+
+}
+
+.title-subtext {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-scale-Gray-500);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    flex-wrap: wrap;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.input-wrapper {
+    padding: 8px 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    border-radius: 20px;
+    border: 1px solid var(--gray-scale-Gray-200);
+    background: #F4F7FA;
+    transition: border-color 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+    border-color: var(--gray-scale-Gray-300);
+}
+
+.input-wrapper-left {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.input-wrapper-left input {
+    width: 100%;
+    padding: 16px 0;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 18px;
+    color: var(--text-color);
+
+    box-shadow: none;
+
+}
+
+
+input::placeholder {
+    color: var(--gray-scale-Gray-300);
+    transition: opacity 0.3s ease;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
+
+.add-button {
+    border-radius: 14px;
+    background: var(--dark-Blue-Normal);
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background: #1655b9;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.task-list-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+   
+}
+
+.task-item {
+    padding: 16px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--gray-scale-Gray-200);
+    background: #F4F7FA;
+    transition: border-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.task-item-content input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    border: 1px solid var(--gray-scale-Gray-200);
+
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.task-item-content input[type="checkbox"]:checked {
+    background-image: url('../assets/check.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: var(--feedback-Green-Light);
+}
+
+
+.task-item.is-completed {
+    background-color: var(--light-Blue-Light-hover); 
+    border-color:(--gray-scale-Gray-100); ;      
+}
+
+.task-item.is-completed p {
+    color: var(--light-Blue-Light-active);
+    text-decoration: line-through;
+}
+
+.task-item.is-completed .delete-button {
+    opacity: 0.5;
+}
+
+
+.task-item-content p {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.delete-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+
+}
