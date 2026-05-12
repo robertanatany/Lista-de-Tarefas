@@ -25,4 +25,5 @@ Este projeto foi fundamental para colocar em prática conceitos avançados de l�
 - **JSON e Web Storage:** Conversão de dados com `JSON.stringify()` e `JSON.parse()` para armazenamento no `localStorage`.
 - **DOM Nativo:** Criação dinâmica de elementos complexos (incluindo SVGs) e gerenciamento de eventos em tempo real.
 
-- Link: https://github.com/robertanatany/Lista-de-Tarefas
+- Link: [https://github.com/robertanatany/Lista-de-Tarefas
+](https://roadmap.sh/projects/task-tracker-js)
